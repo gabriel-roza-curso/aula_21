@@ -51,6 +51,7 @@ try:
 
     # Junção dos DataFrames
     df_novo = pd.merge(df_base, df_roubo_comercio)
+    df_novo = df_novo[(df_novo['ano'] >= 2022) & (df_novo['ano'] <= 2023)]
 
 except Exception as e:
     print(f"Erro ao obter dados: {e}")
